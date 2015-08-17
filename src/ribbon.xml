@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<Application xmlns='http://schemas.microsoft.com/windows/2009/Ribbon'>
+  <!-- Commands section -->
+  <Application.Commands>
+
+    <Command Name="cmdTab1"
+             Symbol="IDC_CMD_TAB1"
+             Id="10000" >
+      <Command.LabelTitle>
+        <String Id ="200">This is a tab</String>
+      </Command.LabelTitle>
+    </Command>
+
+    <Command Name="cmdGroup1"/>
+    <Command Name="cmdGroup2"/>
+    <Command Name="cmdGroup3"/>
+    <Command Name="cmdButton1">
+      <Command.LabelTitle>
+        <String Id ="210">New</String>
+      </Command.LabelTitle>
+      <!-- Providing both large and small images isn't required, but it usually improves the look
+      of your application if the control size changes. -->
+      <Command.LargeImages>
+        <Image Id="211">res/AddTableL.bmp</Image>
+      </Command.LargeImages>
+      <Command.SmallImages>
+        <Image Id="212">res/AddTableS.bmp</Image>
+      </Command.SmallImages>
+    </Command>
+    <Command Name="cmdButton2">
+      <Command.LabelTitle>
+        <String Id ="220">Open</String>
+      </Command.LabelTitle>
+      <Command.LargeImages>
+        <Image Id="221">res/DeleteTableL.bmp</Image>
+      </Command.LargeImages>
+      <Command.SmallImages>
+        <Image Id="222">res/DeleteTableS.bmp</Image>
+      </Command.SmallImages>
+    </Command>
+    <Command Name="cmdQat"/>
+    <Command Name="cmdFileMenu"/>
+    <Command Name="cmdMRUList">
+      <Command.LabelTitle>
+        <String Id ="280">MRU List</String>
+      </Command.LabelTitle>
+    </Command>
+    <Command Name="cmdExit" Symbol="IDC_CMD_EXIT">
+      <Command.LabelTitle>
+        <String Id ="290">Exit Button</String>
+      </Command.LabelTitle>
+      <Command.LargeImages>
+        <Image Id ="291">res/ExitL.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+  </Application.Commands>
+  <Application.Views>
+    <Ribbon>
+      <Ribbon.ApplicationMenu>
+        <ApplicationMenu CommandName="cmdFileMenu">
+          <ApplicationMenu.RecentItems>
+            <RecentItems CommandName="cmdMRUList" MaxCount="1" />
+          </ApplicationMenu.RecentItems>
+          <MenuGroup Class="MajorItems">
+            <Button CommandName="cmdExit" />
+          </MenuGroup>
+        </ApplicationMenu>
+      </Ribbon.ApplicationMenu>
+      <Ribbon.Tabs>
+        <Tab CommandName="cmdTab1">
+          <Group CommandName="cmdGroup1" SizeDefinition="OneButton">
+            <Button CommandName="cmdButton1" />
+          </Group>
+          <Group CommandName="cmdGroup2" SizeDefinition="OneButton">
+            <Button CommandName="cmdButton2" />
+          </Group>
+          <Group CommandName="cmdGroup3" SizeDefinition="TwoButtons">
+            <!-- You can put the same commands into multiple groups. -->
+            <Button CommandName="cmdButton1" />
+            <Button CommandName="cmdButton2" />
+          </Group>
+        </Tab>
+      </Ribbon.Tabs>
+      <Ribbon.QuickAccessToolbar>
+        <QuickAccessToolbar CommandName="cmdQat" />
+      </Ribbon.QuickAccessToolbar>
+    </Ribbon>
+  </Application.Views>
+</Application>

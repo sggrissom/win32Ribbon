@@ -1,0 +1,38 @@
+// ******************************************************************************
+// * This is an automatically generated file containing the ribbon resource for *
+// * your application.                                                          *
+// ******************************************************************************
+
+#include "..\src\resource.h"
+
+STRINGTABLE 
+BEGIN
+    IDC_CMD_TAB1_LabelTitle_RESID L"This is a tab" /* LabelTitle IDC_CMD_TAB1_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    cmdButton1_LabelTitle_RESID L"New" /* LabelTitle cmdButton1_LabelTitle_RESID: (null) */
+END
+
+cmdButton1_SmallImages_RESID    BITMAP    "res\\AddTableS.bmp" /* SmallImages cmdButton1_SmallImages_RESID: (null) */
+cmdButton1_LargeImages_RESID    BITMAP    "res\\AddTableL.bmp" /* LargeImages cmdButton1_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    cmdButton2_LabelTitle_RESID L"Open" /* LabelTitle cmdButton2_LabelTitle_RESID: (null) */
+END
+
+cmdButton2_SmallImages_RESID    BITMAP    "res\\DeleteTableS.bmp" /* SmallImages cmdButton2_SmallImages_RESID: (null) */
+cmdButton2_LargeImages_RESID    BITMAP    "res\\DeleteTableL.bmp" /* LargeImages cmdButton2_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    cmdMRUList_LabelTitle_RESID L"MRU List" /* LabelTitle cmdMRUList_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_CMD_EXIT_LabelTitle_RESID L"Exit Button" /* LabelTitle IDC_CMD_EXIT_LabelTitle_RESID: (null) */
+END
+
+IDC_CMD_EXIT_LargeImages_RESID    BITMAP    "res\\ExitL.bmp" /* LargeImages IDC_CMD_EXIT_LargeImages_RESID: (null) */
+TEST_RIBBON    UIFILE    "markup.bin"
